@@ -1,0 +1,14 @@
+name: Keep Streamlit App Active
+
+on:
+  schedule:
+    - cron: '0 0 * * 0,3' #Sunday and Wednesday
+
+jobs:
+  ping_streamlit_app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake up Streamlit app
+        uses: wei/curl@master
+        with:
+          args: curl https://leetcodedatafetcher.streamlit.app/
