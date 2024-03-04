@@ -2,7 +2,7 @@ name: Keep Streamlit App Active
 
 on:
   schedule:
-    - cron: '*/30 * * * * *' # Every 30 seconds
+    - cron: '0 0 * * *' # At midnight every day
 
 jobs:
   ping_streamlit_app:
